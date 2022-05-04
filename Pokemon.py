@@ -107,68 +107,68 @@ class Pokemon:
         def getSpeed(self):
             return self.__speed
         
-    #  setters
-    def setAtkStage(self, atkStage):
-        self.atkStage = atkStage
-    
-    def setDefStage(self, defStage):
-        self.defStage = defStage
+        #  setters
+        def setAtkStage(self, atkStage):
+            self.atkStage = atkStage
 
-    def setSpAtkStage(self, spAtkStage):
-        self.spAtkStage = spAtkStage
-    
-    def setSpDefStage(self, spDefStage):
-        self.spDefStage = spDefStage
+        def setDefStage(self, defStage):
+            self.defStage = defStage
 
-    def setSpeedStage(self, speedStage):
-        self.speedStage = speedStage
-    
-    # MOVE METHODS
-    # getters
-    def getMove(self):
-        return self.move1
-    
-    def getMove2(self):
-        return self.move2
-    
-    def getMove3(self):
-        return self.move3
-    
-    def getMove4(self):
-        return self.move4
-    # setters
+        def setSpAtkStage(self, spAtkStage):
+            self.spAtkStage = spAtkStage
 
-    def setMove1(self, move1):
-        self.mov1 = move1
+        def setSpDefStage(self, spDefStage):
+            self.spDefStage = spDefStage
 
-    def setMove2(self, move2):
-        self.move2 = move2
+        def setSpeedStage(self, speedStage):
+            self.speedStage = speedStage
 
-    def setMove3(self, move3):
-        self.move3 = move3
+        # MOVE METHODS
+        # getters
+        def getMove(self):
+            return self.move1
 
-    def setMove4(self, move4):
-        self.move4 = move4
+        def getMove2(self):
+            return self.move2
 
-    # Printing methods
+        def getMove3(self):
+            return self.move3
 
-    def loseHP(self, lostHP):
-        self.battleHP -= lostHP
-        if self.battleHP < 0:
-            self.battleHP = 0
-        msg = self.name + " lost "  + str(lostHP) + 'HP!'
-        return msg
+        def getMove4(self):
+            return self.move4
+        # setters
 
-    def gainHP(self, gainedHP):
-        self.__hp = gainedHP
+        def setMove1(self, move1):
+            self.mov1 = move1
 
-    def isAlive(self):
-        if self.battleHP > 0:
-            return True
-        else:
-            return False
+        def setMove2(self, move2):
+            self.move2 = move2
 
-    def faint(self):
-        if self.battleHP <= 0:
-            msg = self.name + "fainted"
+        def setMove3(self, move3):
+            self.move3 = move3
+
+        def setMove4(self, move4):
+            self.move4 = move4
+
+        # Printing methods
+
+        def loseHP(self, lostHP):
+            self.battleHP -= lostHP
+            if self.battleHP < 0:
+                self.battleHP = 0
+            msg = self.name + " lost "  + str(lostHP) + 'HP!'
             return msg
+
+        def gainHP(self, gainedHP):
+            self.__hp = gainedHP
+
+        def isAlive(self):
+            if self.battleHP > 0:
+                return True
+            else:
+                return False
+
+        def faint(self):
+            if self.battleHP <= 0:
+                msg = self.name + "fainted"
+                return msg
